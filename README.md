@@ -1,34 +1,106 @@
-# EMarkerclusterer
+# Enhanced MarkerClusterer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/e_markerclusterer`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to e_markerclusterer gem! This gem is a javascript to show various infographics on Google Map, which is based on [Marker Clusterer Plus of Google Map Utilities V3](https://github.com/printercu/google-maps-utility-library-v3-read-only/tree/master/markerclustererplus) and infographic charts is derived from [Chart Marker Clusterer by Hassan Mughal](https://github.com/hassanlatif/chart-marker-clusterer).
 
-TODO: Delete this and the text above, and describe your gem
+## Requirement
 
-## Installation
+1) Gemfile
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'e_markerclusterer'
+```gem 'e_markerclusterer'
 ```
 
-And then execute:
+2) Replace Google Marker Clusterer
 
-    $ bundle
+Replace below google script
 
-Or install it yourself as:
+Remove the line 
 
-    $ gem install e_markerclusterer
+```<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>```
+
+on your dom, and add this line on asset pipeline:
+
+```\\= require e_markerclusterer
+```
+
+If you use [Google maps for Rails](https://github.com/apneadiving/Google-Maps-for-Rails), add lines on asset pipeline:
+
+```\\= require e_markerclusterer
+\\= require gmaps/google
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+e_markerclusterer gem basically works with Google maps for Rails. Only one difference is legend information.
 
-## Development
+1) GeoJSON:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+If you generate markers with sex legend, you should set title of markers for legend.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```@users = User.all
+@markers = Gmaps4rails.build_markers(@users) do |user, marker|
+  marker.title user.sex
+  marker.lat user.latitude
+  marker.lng user.longitude
+end
+@legend = { 'male' => 1, 'female' => 2}
+```
+
+2) HTML view:
+
+```<div style='width: 800px;'>
+  <%= content_tag :div, id: "map", style: 'width: 800px; height: 400px;', data: { markers: @markers, legend: @legend } do %>
+  <% end %>
+</div>
+```
+
+3) Javascript code:
+
+Generate handle:
+
+```var handler;
+google.charts.load('current', {'packages': ['corechart']});
+handler = Gmaps.build('Google', {
+  markers: {
+    clusterer: {
+      gridSize: 40,
+      maxZoom: 10,
+      styles: [{
+        height: 60,
+        width: 60
+      }],
+      legend: $('#map').data('legend')
+    }
+  }
+});
+```
+
+And build map with markers:
+
+```
+handler.buildMap({
+  provider: {
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  },
+  internal: {
+    id: 'map'
+  }
+}, function() {
+  var markers;
+  markers = gmapHandler.addMarkers($('#map').data('markers'));
+});
+```
+
+## Todo?
+
+Feel free to contact us, you have your say.
+
+## Copyright
+
+Apache license 2.0
+
+Author: Sung Gon Yi (skonmeme@gmail.com)
 
 ## Contributing
 
