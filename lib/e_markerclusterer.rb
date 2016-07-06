@@ -1,8 +1,6 @@
 require "e_markerclusterer/version"
+#require "e_markerclusterer/engine"
 
 module EMarkerclusterer
-  
-  class Engine < ::Rails::Engine
-  end
-  
+    
 end
