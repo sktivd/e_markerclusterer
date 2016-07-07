@@ -1,5 +1,5 @@
 require "e_markerclusterer/version"
-#require "e_markerclusterer/engine"
+require "e_markerclusterer/engine"
 
 module EMarkerclusterer
     
