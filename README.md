@@ -119,5 +119,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/skonmeme/e_markerclusterer.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sktivd/e_markerclusterer.
 
