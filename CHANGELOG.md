@@ -1,5 +1,10 @@
   Note: This is in reverse chronological order, so newer entries are added to the top.
 
+## Enhanced MarkerClusterer 0.0.5
+
+######2016. 8. 1
+* A bug not to show a chart of last created cluster is fixed.
+
 ## Enhanced MarkerClusterer 0.0.4
 
 ######2016. 7. 25
