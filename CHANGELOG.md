@@ -1,5 +1,10 @@
   Note: This is in reverse chronological order, so newer entries are added to the top.
 
+## Enhanced MarkerClusterer 0.0.6
+
+######2016. 10. 26
+* rails dependency was changed to '>= 4.2.5.2'
+
 ## Enhanced MarkerClusterer 0.0.5
 
 ######2016. 8. 1
