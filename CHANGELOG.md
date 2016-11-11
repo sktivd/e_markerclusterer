@@ -2,6 +2,9 @@
 
 ## Enhanced MarkerClusterer 0.0.6
 
+######2016. 11. 11
+* rails dependency was back to '~> 4.2.5.2'. The '>=' operator does not work.
+
 ######2016. 10. 26
 * rails dependency was changed to '>= 4.2.5.2'
 
