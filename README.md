@@ -1,7 +1,7 @@
 # Enhanced MarkerClusterer
 
 [![Build Status](https://travis-ci.org/sktivd/e_markerclusterer.svg?branch=master)](https://travis-ci.org/sktivd/e_markerclusterer)
-[![Gem Version](https://badge.fury.io/rb/e_markerclusterer.png)](http://badge.fury.io/rb/e_markerclusterer)
+[![Gem Version](https://badge.fury.io/rb/e_markerclusterer.png)](https://badge.fury.io/rb/e_markerclusterer)
 
 Welcome to e_markerclusterer gem! This gem is a javascript to show various infographics on Google Map, which is based on [Marker Clusterer Plus of Google Map Utilities V3](https://github.com/printercu/google-maps-utility-library-v3-read-only/tree/master/markerclustererplus) and infographic charts is derived from [Chart Marker Clusterer by Hassan Mughal](https://github.com/hassanlatif/chart-marker-clusterer).
 
@@ -49,7 +49,7 @@ If you generate markers with sex legend, you should set title of markers for leg
 ```
 @users = User.all
 @markers = Gmaps4rails.build_markers(@users) do |user, marker|
-  marker.title user.sex
+  marker.title user.title
   marker.lat user.latitude
   marker.lng user.longitude
 end
