@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/sktivd/e_markerclusterer.svg?branch=master)](https://travis-ci.org/sktivd/e_markerclusterer)
 [![Gem Version](https://badge.fury.io/rb/e_markerclusterer.png)](https://badge.fury.io/rb/e_markerclusterer)
+[![Code Climate](https://codeclimate.com/github/sktivd/e_markerclusterer/badges/gpa.svg)](https://codeclimate.com/github/sktivd/e_markerclusterer)
+[![Test Coverage](https://codeclimate.com/github/sktivd/e_markerclusterer/badges/coverage.svg)](https://codeclimate.com/github/sktivd/e_markerclusterer/coverage)
 
 Welcome to e_markerclusterer gem! This gem is a javascript to show various infographics on Google Map, which is based on [Marker Clusterer Plus of Google Map Utilities V3](https://github.com/printercu/google-maps-utility-library-v3-read-only/tree/master/markerclustererplus) and infographic charts is derived from [Chart Marker Clusterer by Hassan Mughal](https://github.com/hassanlatif/chart-marker-clusterer).
 
