@@ -1,7 +1,7 @@
 # Enhanced MarkerClusterer
 
 [![Build Status](https://travis-ci.org/sktivd/e_markerclusterer.svg?branch=master)](https://travis-ci.org/sktivd/e_markerclusterer)
-[![Gem Version](https://badge.fury.io/rb/e_markerclusterer.png)](https://badge.fury.io/rb/e_markerclusterer)
+[![Gem Version](https://badge.fury.io/rb/e_markerclusterer.svg)](https://badge.fury.io/rb/e_markerclusterer)
 [![Code Climate](https://codeclimate.com/github/sktivd/e_markerclusterer/badges/gpa.svg)](https://codeclimate.com/github/sktivd/e_markerclusterer)
 [![Test Coverage](https://codeclimate.com/github/sktivd/e_markerclusterer/badges/coverage.svg)](https://codeclimate.com/github/sktivd/e_markerclusterer/coverage)
 
